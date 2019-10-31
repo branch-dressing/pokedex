@@ -1,59 +1,97 @@
 body {
-    display: flex;
-    font-family: 'Press Start 2P', sans-serif;
+    color: white;
     background-color: black;
+    font-family: 'Press Start 2P';
+    max-width: 442px;
+    margin: 0 auto;
+    border: dashed 1px pink
+}
+
+
+
+#pokedex {
+    position: fixed;
+    max-height: 100%;
+    max-width: 100%;
+    z-index: 50;
 }
 
 header {
     position: fixed;
     z-index: 100;
-    width: 95%;
+    color: #fff60d;
+    text-shadow:
+    -2px -2px 0 #4671f0,  
+    2px -2px 0 #4671f0,
+    -2px 2px 0 #4671f0,
+    2px 2px 0 #4671f0;
+    width: 442px;
 }
 
 h1 {
-    text-align: end;
-    font-size: 24px;
+    width: 98%;
+    font-size: 100%;
 }
 
 nav {
+    position: relative;
     writing-mode: vertical-lr;
-    position: fixed;
-    top: 20px;
-    left: 187px;
     line-height: 2.6;
+    margin-top: -50px;;
+    left: 37%
 }
 
 nav li {
-    transform: rotate(-45deg)
+    transform: rotate(-45deg);
+    font-size: 50%;
 }
 
-#pokedex {
-    max-height: 99%;
-    max-width: 95%;
-    content: url('./assets/pokedex.png');
-    background-size: cover;
-    position: fixed;
-    z-index: 20;
-    top: 0px;
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
 }
 
 #screen {
-    margin: 0 auto;
-    background-color: darkblue;
-    max-width: 410px;
-    height: 10000px;
-    top: 310px;
-    left: 50px;
-    z-index: 5
+    border: solid 1px lightblue;
+    width: 83%;  
+    margin-top: 45%;
+    padding-bottom: 90%;
+    background-color: lightblue;
+    font-size: 10%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
 }
 
-footer {
-    color: white;
+#screen img {
+    width: 60%;
+}
+
+.pokemon {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.pokemon ul {
+    padding-left: 3px;
+    color: black;
+    line-height: 2.25
+}
+
+.name {
+    font-size: 12px
+}
+
+
+#band {
+    background-color: black;
+    width: 100%;
     position: fixed;
     z-index: 10;
-    top: 700px;
-    text-align: center;
-    background-color: black;
-    width: 100%
+    bottom: 0px;
+    height: 30%
 }
+
