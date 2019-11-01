@@ -4,8 +4,8 @@ class Header extends Component {
     renderHTML() {
         return /*html*/`
         <header>
-            <img id="pokedex" src="./assets/pokedex.png">
-            <span id="band">SPAN</span>
+        <img id="pokedex" src="./assets/pokedex.png">
+        <span id="band">SPAN</span>
             <div id="true-header">
                 <h1>Pokédex</h1>
                 <nav>

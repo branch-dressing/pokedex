@@ -8,7 +8,6 @@ body {
 
 #pokedex {
     position: fixed;
-    top: 0;
     max-height: 100%;
     max-width: 100%;
     z-index: 50;
@@ -16,7 +15,6 @@ body {
 
 #true-header {
     position: fixed;
-    top: 0;
     z-index: 100;
     color: #fff60d;
     text-shadow:
@@ -28,15 +26,11 @@ body {
     max-width: 100%;
 }
 
-.section {
-    display: flex;
-    justify-content: center;
-}
-
 h1 {
     font-size: 100%;
     text-align: end;
 }
+
 
 nav {
     position: relative;
@@ -59,10 +53,16 @@ main {
 }
 
 #screen {
+    border: solid 1px lightblue;
     width: 83%;  
     margin-top: 45%;
     padding-bottom: 90%;
+    background-color: lightblue;
     font-size: 10%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
 }
 
 #screen img {
@@ -70,32 +70,27 @@ main {
 }
 
 .pokemon {
-    padding-top: 20px;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
 }
 
 .pokemon ul {
     padding-left: 3px;
     color: black;
-    line-height: 2.25;
+    line-height: 2.25
 }
 
 .name {
-    font-size: 12px;
-    text-transform: capitalize;
+    font-size: 12px
 }
+
 
 #band {
     background-color: black;
     width: 100%;
-    height: 30%;
     position: fixed;
     z-index: 10;
     bottom: 0px;
-    
+    height: 30%
 }
 
-.nothing {
-}
