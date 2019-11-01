@@ -14,7 +14,7 @@ body {
     z-index: 50;
 }
 
-header {
+#true-header {
     position: fixed;
     z-index: 100;
     color: #fff60d;
