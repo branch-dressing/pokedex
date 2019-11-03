@@ -3,6 +3,7 @@ import Header from '../common/header.js';
 //import Paging from './paging.js';
 import PokeList from './poke-list.js';
 import { getPokemon } from '../services/pokemon-api.js';
+//import Buttons from './buttons.js';
 
 class ExploreApp extends Component {
     async onRender(el) {
@@ -19,6 +20,9 @@ class ExploreApp extends Component {
 
         const pokeList = new PokeList({ pokemon: [] });
         screen.appendChild(pokeList.renderDOM());
+
+        //const buttons = new Buttons();
+        //screen.appendChild(buttons.renderDOM());
 
         const response = await getPokemon();
         const pokemon = response.results;
