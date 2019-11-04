@@ -10,7 +10,7 @@ class PokeList extends Component {
             const props = { pokemon };
             const singlePokemon = new SinglePokemon(props);
             const singlePokemonDOM = singlePokemon.renderDOM();
-            el.appendChild(singlePokemonDOM); 
+            el.appendChild(singlePokemonDOM);
         });
     }
 

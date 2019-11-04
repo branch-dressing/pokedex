@@ -1,32 +1,38 @@
 import Component from '../component.js';
 import Header from '../common/header.js';
-//import Paging from './paging.js';
+import Paging from './paging.js';
 import PokeList from './poke-list.js';
 import { getPokemon } from '../services/pokemon-api.js';
-//import Buttons from './buttons.js';
+import SearchOptions from './search-options.js';
 
 class ExploreApp extends Component {
-    async onRender(el) {
+    onRender(el) {
         const header = new Header();
         el.prepend(header.renderDOM());
-
-        // const optionsSection = el.querySelector('#some-id');
-        // const serchOptions = new SearchOptions();
-        // optionsSection.prepend(SearchOptions.renderDOM());
-
+        
         const screen = el.querySelector('.section');
-        //const paging = new Paging();
-        //screen.appendChild(.renderDOM());
-
         const pokeList = new PokeList({ pokemon: [] });
         screen.appendChild(pokeList.renderDOM());
+        
+        const container = el.querySelector('#container');
+        const searchOptions = new SearchOptions();
+        container.appendChild(searchOptions.renderDOM());
+        const paging = new Paging({ totalResults: 0 });
+        container.appendChild(paging.renderDOM());
 
-        //const buttons = new Buttons();
-        //screen.appendChild(buttons.renderDOM());
+        async function loadPokemon() {
+            const response = await getPokemon();
+            const pokemon = response.results;
+            const totalResults = response.totalResults;
+            pokeList.update({ pokemon });
+            paging.update({ totalResults: totalResults });
+        }
 
-        const response = await getPokemon();
-        const pokemon = response.results;
-        pokeList.update({ pokemon });
+        loadPokemon();
+
+        window.addEventListener('hashchange', () => {
+            loadPokemon();
+        });
     }
 
     renderHTML() {

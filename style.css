@@ -3,74 +3,62 @@ body {
     background-color: black;
     font-family: 'Press Start 2P';
     max-width: 442px;
-    margin: 0 auto;
+    height: 999px;
+    margin: auto auto;
 }
 
-header{
+header {
     position: fixed;
     max-width: 442px;
 }
 
+#container {
+    max-width: 442px;
+}
+
+
 #pokedex {
-    position: relative;
-    top: 0;
     max-height: 100%;
     max-width: 100%;
+    position: relative;
+    top: 0;
     z-index: 50;
 }
 
 #band {
+    position: relative;
     background-color: black;
     max-width: 442px;
     height: 999px;
-    position: relative;
     z-index: 10;
+}
+
+#controls {
+    max-width: 442px;
+    position: fixed;
+    z-index: 55;
+    top: 60%;
+    color: white;
+}
+
+form {
+    z-index: 56;
+    top: 55%;
+    left: 12%;
+    position: fixed;
 }
 
 .buttons {
     position: relative;
-    width: 25px;
-    height: 25px;
     z-index: 955;
     background-color: blue;
+    color: white;
 }
-
-/* #true-header {
-    position: fixed;
-    top: 0;
-    z-index: 100;
-    color: #fff60d;
-    text-shadow:
-    -2px -2px 0 #4671f0,  
-    2px -2px 0 #4671f0,
-    -2px 2px 0 #4671f0,
-    2px 2px 0 #4671f0;
-    max-height: 100%;
-    max-width: 100%;
-} */
 
 .section {
     display: flex;
     justify-content: center;
 }
-
-/* h1 {
-    font-size: 100%;
-    text-align: end;
-} */
-
-/* nav {
-    position: relative;
-    writing-mode: vertical-lr;
-    line-height: 2.6;
-    margin-top: -50px;;
-    left: 37%
-}
-
-nav li {
-    transform: rotate(-45deg);
-    font-size: 50%;
-} */
 
 main {
     display: flex;
@@ -110,9 +98,11 @@ main {
 }
 
 .name {
-    font-size: 22px;
+    font-size: 18px;
     text-transform: capitalize;
+    color: white;
 }
+
 
 
 #iframe-box {
@@ -123,12 +113,3 @@ main {
 #iframe-box img{
     width: 82%;
 }
-
-/* #controls {
-    position: fixed;
-    z-index: 200;
-    margin-top: 59.5%;
-    margin-left: 12%;
-    width: 75px;
-    height: 75px;
-} */

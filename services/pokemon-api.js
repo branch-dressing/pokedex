@@ -1,6 +1,18 @@
-const URL = 'https://alchemy-pokedex.herokuapp.com/api/pokedex?page=1&perPage=151';
+const URL = 'https://alchemy-pokedex.herokuapp.com/api/pokedex?';
 
-export async function getPokemon() {  
-    const response = await fetch(URL);
-    return await response.json();
+export async function getPokemon() {
+    let queryString = window.location.hash.slice(1);
+    const url = `${URL}${queryString}`;
+    
+    const results = await fetch(url);
+    const data = await results.json();
+
+    if (data.results === 'False') {
+        return {
+            results: [],
+            count: 0
+        };
+    }
+
+    return data;
 }
