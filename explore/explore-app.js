@@ -17,15 +17,15 @@ class ExploreApp extends Component {
         const container = el.querySelector('#container');
         const searchOptions = new SearchOptions();
         container.appendChild(searchOptions.renderDOM());
-        const paging = new Paging({ totalResults: 0 });
+        const paging = new Paging({ count: 0 });
         container.appendChild(paging.renderDOM());
 
         async function loadPokemon() {
             const response = await getPokemon();
             const pokemon = response.results;
-            const totalResults = response.totalResults;
+            const count = response.count;
             pokeList.update({ pokemon });
-            paging.update({ totalResults: totalResults });
+            paging.update({ count: count });
         }
 
         loadPokemon();

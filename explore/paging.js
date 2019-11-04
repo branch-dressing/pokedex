@@ -48,7 +48,7 @@ class Paging extends Component {
     }
     renderHTML() {
         //const perPage = 20;
-        const count = this.props.count;
+        //const count = this.props.count;
         const queryString = window.location.hash.slice(1);
         const searchParams = new URLSearchParams(queryString);
 
