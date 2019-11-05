@@ -4,4 +4,10 @@ const app = new App();
 const el = app.renderDOM();
 document.body.prepend(el);
 
-//setTimeout(function(){window.location = './pokedex-explore.html';}, 29000);
+const clickme = document.querySelector('body');
+
+clickme.addEventListener('click', event);
+
+function event() {
+    window.location = './pokedex-explore.html';
+}

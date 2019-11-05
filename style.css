@@ -4,7 +4,7 @@ body {
     font-family: 'Press Start 2P';
     max-width: 442px;
     height: 999px;
-    margin: auto auto;
+    margin: 0 auto;
 }
 
 header {
@@ -101,15 +101,4 @@ main {
     font-size: 18px;
     text-transform: capitalize;
     color: white;
-}
-
-
-
-#iframe-box {
-    margin-left: 15%;
-    margin-top: 47%;
-}
-
-#iframe-box img{
-    width: 82%;
 }
