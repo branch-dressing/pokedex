@@ -1,0 +1,57 @@
+body {
+    color: white;
+    background-color: black;
+    font-family: 'Press Start 2P';
+    max-width: 442px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    max-width: 442px;
+}
+
+#container {
+    max-width: 442px;
+}
+
+#pokedex {
+    max-width: 100%;
+    max-height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 50;
+}
+
+#band {
+    display: none;
+}
+
+#iframe-box {
+    margin-left: 15%;
+    margin-top: 47%;
+}
+
+#iframe-box img{
+    width: 82%;
+}
+
+#press-start {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    position: fixed;
+    top: 38%;
+    color: #a3a3a3;
+    background-color: white;
+    text-shadow: 
+        2px 2px 1px #030303,
+        -2px 2px 1px #030303,
+        2px -2px 1px #030303,
+        -2px -2px 1px #030303;
+    font-size: 100%;
+    text-align: center;
+}

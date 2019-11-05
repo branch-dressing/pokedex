@@ -1,0 +1,104 @@
+body {
+    color: white;
+    background-color: black;
+    font-family: 'Press Start 2P';
+    max-width: 442px;
+    height: 999px;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    max-width: 442px;
+}
+
+#container {
+    max-width: 442px;
+}
+
+
+#pokedex {
+    max-height: 100%;
+    max-width: 100%;
+    position: relative;
+    top: 0;
+    z-index: 50;
+}
+
+#band {
+    position: relative;
+    background-color: black;
+    max-width: 442px;
+    height: 999px;
+    z-index: 10;
+}
+
+#controls {
+    max-width: 442px;
+    position: fixed;
+    z-index: 55;
+    top: 60%;
+    color: white;
+}
+
+form {
+    z-index: 56;
+    top: 55%;
+    left: 12%;
+    position: fixed;
+}
+
+.buttons {
+    position: relative;
+    z-index: 955;
+    background-color: blue;
+    color: white;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#screen {
+    width: 83%;  
+    margin-top: 45%;
+    padding-bottom: 90%;
+    font-size: 10%;
+}
+
+#screen img {
+    width: 60%;
+}
+
+.pokemon {
+    padding-top: 20px;
+    padding: 10px;
+}
+
+.stats-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -20px
+}
+
+.pokemon ul {
+    list-style: none;
+    padding-left: 3px;
+    color: black;
+    line-height: 2.25;
+}
+
+.name {
+    font-size: 18px;
+    text-transform: capitalize;
+    color: white;
+}
